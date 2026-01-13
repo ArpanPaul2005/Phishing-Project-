@@ -10,7 +10,7 @@ Linux Environment: Ubuntu via Windows Subsystem for Linux (WSL)
 Tool Used: Zphisher (open-source phishing simulation framework)
 WSL was chosen to avoid using a full virtual machine while still maintaining a Linux-based testing environment.
 
-⚙️ Project Workflow (Conceptual)-
+Project Workflow (Conceptual)-
 
 1️. Linux Environment Initialization
 The project begins by launching Ubuntu using WSL from the Windows command line.
