@@ -1,143 +1,88 @@
 # Phishing-Project-
 
-📌 Project Overview
+Project Description-
+This project demonstrates the working principle of phishing attacks using the open-source framework Zphisher, executed in a controlled Linux environment.
+The objective is to understand how phishing toolkits operate, how fake login pages are generated, and how attackers attempt to collect user credentials — strictly for educational and awareness purposes.
 
-This project demonstrates how phishing attacks work at a conceptual and technical level using the open-source tool Zphisher.
-The primary goal of this project is to understand phishing techniques, analyze how attackers deceive users, and learn how such attacks can be detected, prevented, and mitigated in real-world systems.
+System Environment Used-
+Host OS: Windows
+Linux Environment: Ubuntu via Windows Subsystem for Linux (WSL)
+Tool Used: Zphisher (open-source phishing simulation framework)
+WSL was chosen to avoid using a full virtual machine while still maintaining a Linux-based testing environment.
 
-⚠️ Disclaimer:
-This project is strictly for educational purposes, cybersecurity awareness, and authorized testing only.
-Unauthorized use of phishing tools to collect credentials or impersonate services is illegal and unethical.
+⚙️ Project Workflow (Conceptual)-
 
-🧠 What is Phishing?
+1️. Linux Environment Initialization
+The project begins by launching Ubuntu using WSL from the Windows command line.
+This provides a Linux terminal where security tools can be executed safely in isolation from the host system.
 
-Phishing is a type of social engineering attack where an attacker attempts to:
+2️. Repository Acquisition
+The Zphisher source code is obtained from its official GitHub repository and stored locally within the Ubuntu file system.
+This repository contains:
+Shell scripts
+Web templates
+Local hosting configurations
 
-Imitate a trusted website or service
+3️. Toolkit Execution
+After navigating into the project directory, the main Zphisher script is executed.
+This launches a command-line interface (CLI) that allows users to select different simulated phishing scenarios.
+At this stage:
+Required dependencies are verified
+The phishing framework initializes its internal services
 
-Trick users into entering sensitive information
+4️. Selection of Phishing Template
+For demonstration purposes, an Instagram login page template is selected.
+The tool then generates a replica of the original login interface, visually similar to the real website.
+This step helps demonstrate:
+How attackers mimic trusted platforms
+Why users may fail to distinguish fake pages from legitimate ones
 
-Capture credentials such as usernames and passwords
+5️. Local Hosting and Port Forwarding
+The generated phishing page is hosted locally.
+To make the page reachable for demonstration, a port forwarding service (Cloudflared) is selected.
+Cloudflared:
+Creates a temporary public tunnel
+Automatically assigns a port
+Maps the local server to a public-facing URL
+No custom port configuration is used in this project.
 
-This project focuses on how phishing pages are structured, not on committing real attacks.
+6️. Demonstration of Data Capture Mechanism
+When a user enters login credentials into the simulated page:
+The data is captured by the local server
+Information is logged within the tool’s environment
+This demonstrates:
+How phishing tools collect sensitive data
+Why phishing is dangerous
+How attackers exploit human trust rather than technical vulnerabilities
 
-🛠️ About Zphisher
+All credentials used during testing were dummy/test data, and no real accounts were targeted.
 
-Zphisher is an open-source phishing simulation framework written primarily in Bash and PHP.
-It provides:
+Key Learning Outcomes-
+This project helps in understanding:
+The internal workflow of phishing frameworks
+The role of port forwarding in exposing local services
+How realistic phishing pages are generated
+Why phishing attacks are effective
+The importance of cybersecurity awareness and user education
 
-Pre-built website templates for learning purposes
+Ethical Considerations-
+This project was performed only in a controlled environment
+No real individuals were targeted
+No real credentials were collected
+The project complies with ethical hacking principles
+Misuse of such tools outside authorized testing environments is illegal.
 
-Local hosting of simulated login pages
-
-Logging mechanisms to demonstrate how data capture occurs
-
-Zphisher is commonly used in:
-
-Cybersecurity labs
-
-Ethical hacking courses
-
-Awareness demonstrations
-
-📥 High-Level Setup & Deployment (Conceptual)
-
-⚠️ No real-world deployment or public exposure is performed in this project.
-
-At a conceptual level, the workflow is as follows:
-
-Obtain the Source Code
-
-The project uses the official Zphisher open-source repository from GitHub.
-
-The repository contains scripts and template files for phishing simulation.
-
-Local Environment Setup
-
-The tool runs in a Linux-based environment (native Linux, virtual machine, or WSL).
-
-Required components include:
-
-A shell environment
-
-A local web server (PHP-based)
-
-Networking utilities for local testing
-
-Local Deployment
-
-Phishing pages are hosted only on localhost or a closed lab network.
-
-No public links are generated or shared.
-
-Simulation Execution
-
-A test phishing page is loaded locally.
-
-Sample credentials are entered to observe how data capture works.
-
-Logged data is analyzed to understand attacker techniques.
-
-🔍 How This Project Uses Zphisher
-
-This project uses Zphisher to:
-
-Study phishing page structure
-
-Understand how login forms are replicated
-
-Observe credential logging mechanisms
-
-Demonstrate why users fall for phishing attacks
-
-Analyze weaknesses in human behavior, not systems
-
-No real user data is collected.
-
-🛡️ Defensive & Educational Applications
-
-This project helps in learning:
-
-How phishing attacks are created
-
-How browser warnings and HTTPS protect users
-
-How organizations train employees against phishing
-
-How security teams detect fake login pages
-
-Why multi-factor authentication (MFA) is important
-
-⚖️ Legal & Ethical Considerations
-
-This project complies with ethical hacking principles
-
-All testing is done in a controlled environment
-
-No third-party systems, accounts, or users are targeted
-
-All credentials used are dummy/test data
-
-Any misuse of phishing tools outside authorized environments is punishable under cyber laws.
-
-🎓 Academic Relevance
-
+Academic Relevance-
 This project is relevant to:
-
 Cybersecurity fundamentals
-
 Ethical hacking
-
 Network security
+Social engineering analysis
+Secure system design
 
-Social engineering awareness
-
-Computer science security coursework
-
-📚 References
-
-OWASP Top 10 – Social Engineering
-
-Zphisher GitHub Documentation
-
-Cybersecurity Awareness Training Materials
+Conclusion-
+By simulating a phishing attack workflow, this project highlights how easily users can be deceived and emphasizes the need for:
+User awareness training
+Strong authentication mechanisms
+Phishing detection systems
+The focus of this project is learning and prevention, not exploitation.
